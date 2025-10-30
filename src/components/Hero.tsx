@@ -26,11 +26,16 @@ export const Hero = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" variant="hero" className="group">
-                Start Creating Free
-                <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+              <Button size="lg" variant="hero" className="group" asChild>
+                <a href="/generate">
+                  Start Creating Free
+                  <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+                </a>
               </Button>
-              <Button size="lg" variant="outline">
+              <Button size="lg" variant="outline" onClick={() => {
+                const element = document.getElementById('features');
+                element?.scrollIntoView({ behavior: 'smooth' });
+              }}>
                 See How It Works
               </Button>
             </div>

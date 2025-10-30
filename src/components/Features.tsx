@@ -26,7 +26,7 @@ const features = [
 
 export const Features = () => {
   return (
-    <section className="py-24 bg-secondary/50">
+    <section id="features" className="py-24 bg-secondary/50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold">

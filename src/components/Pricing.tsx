@@ -40,7 +40,7 @@ const plans = [
 
 export const Pricing = () => {
   return (
-    <section className="py-24">
+    <section id="pricing" className="py-24">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold">
@@ -82,8 +82,9 @@ export const Pricing = () => {
                 className="w-full mb-6" 
                 variant={plan.popular ? "hero" : "outline"}
                 size="lg"
+                asChild
               >
-                {plan.cta}
+                <a href="/generate">{plan.cta}</a>
               </Button>
               
               <ul className="space-y-3">

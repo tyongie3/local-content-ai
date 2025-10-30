@@ -20,11 +20,16 @@ export const CTA = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-            <Button size="lg" variant="hero" className="group">
-              Start Creating Free
-              <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+            <Button size="lg" variant="hero" className="group" asChild>
+              <a href="/generate">
+                Start Creating Free
+                <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+              </a>
             </Button>
-            <Button size="lg" variant="outline">
+            <Button size="lg" variant="outline" onClick={() => {
+              const element = document.getElementById('pricing');
+              element?.scrollIntoView({ behavior: 'smooth' });
+            }}>
               View Pricing
             </Button>
           </div>
